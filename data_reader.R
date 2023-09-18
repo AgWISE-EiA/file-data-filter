@@ -69,7 +69,12 @@ read_and_filter_excel <- function(file_path,sheet_name = NULL, filters = list())
         data <- data %>% dplyr::filter(get(column_name) > filter_value)
       } else if (comparator == "<") {
         data <- data %>% dplyr::filter(get(column_name) < filter_value)
+      } else if (comparator == ">="){
+        data <- data %>% dplyr::filter(get(column_name) >= filter_value)
+      }else if(comparator== "<="){
+        data <- data %>% dplyr::filter(get(column_name) <= filter_value)
       }
+      
       
       # You can add more comparators as needed
     }
