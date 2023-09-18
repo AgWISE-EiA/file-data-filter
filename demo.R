@@ -7,8 +7,8 @@ source("data_reader.R")
 
 # Example usage:
 file_path <- "Data/potato.xlsx"
-column_to_filter <- "gps"  # Replace with the actual column name
-filter_value <- "53245,78858"
+column_to_filter <- "fertilizer"  # Replace with the actual column name
+filter_value <- "DAP"
 sheet_name=NULL
 
 result <- read_excel_file(
